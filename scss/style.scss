@@ -1,0 +1,101 @@
+@import "compass/css3";
+
+body{
+  background:#eee;}
+section{
+  display:block;
+  width:400px;
+  margin:180px auto;}
+
+/* anim*/
+.content:hover > .button:after {
+  color:#dbd8db;}
+.content:active > .button {
+  margin:2px -51px;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 58px dashed #ccc;}
+
+
+/* Radio*/
+input[type=radio]{
+  appearance:none;
+  width: 0;
+  height: 0;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 60px dashed #666;
+  margin-left:5px;
+  border-radius:15px;
+}
+label{
+  border-radius:10px;
+  width: 0;
+  height: 0;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 60px dashed #ccc;
+  position:absolute;
+  margin:-4px -101px;
+  transition:margin .1s ease, border .3s ease;
+
+}
+label:before{
+  display:block;
+  content:'';
+  width:90px;
+  height:0.04em;
+  box-shadow:0px -5px 2px 1px #999;
+  position:absolute;
+  margin:64px -45px;
+}
+label:after{
+  display:block;
+  content:'';
+  width:90px;
+  height:0.04em;
+  box-shadow:5px 5px 10px 1px #333,5px 5px 10px 1px #333;
+  position:absolute;
+  margin:58px -55px; 
+}
+label:last-child{margin-left:-97px;}
+
+input[id=trianglero]:checked + label[for=trianglero]{
+  margin:2px -106px;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 58px dashed #a8a8a8;}
+input[id=trianglert]:checked + label[for=trianglert]{
+  margin:2px -106px;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 58px dashed #a8a8a8;}
+input[id=trianglerth]:checked + label[for=trianglerth]{
+  margin:2px -102px;
+  border-left: 50px dashed transparent;
+  border-right: 50px dashed transparent;
+  border-bottom: 58px dashed #a8a8a8;}
+
+input[id=trianglero]:checked+ label:after{
+  box-shadow:2px 2px 8px #000;
+  margin:26px -56px;
+  transform:rotate(-50deg);
+  width:70px;}
+input[id=trianglert]:checked+ label:after{
+  box-shadow:2px 2px 8px #000;
+  margin:26px -56px;
+  transform:rotate(-50deg);
+  width:70px;}
+input[id=trianglerth]:checked+ label:after{
+  box-shadow:2px 2px 10px #000;
+  margin:26px -56px;
+  transform:rotate(-50deg);
+  width:70px;}
+
+input:checked + label:before{
+  box-shadow:0 0 0;
+}
+*{
+    outline: none;
+
+}
